@@ -7,17 +7,16 @@ import { tourData } from '../../tourData';
 const Tourlist = () => {
   const [tours, setTours] = useState(tourData);
   console.log(tours);
-  
+
   const removeTour = id => {
-    console.log(id);
-    
-  }
+    setTours(tours.filter(tour => tour.id !== id));
+  };
 
   return (
     <section className="tourlist">
-      {
-        tours.map(tour => <Tour key={tour.id} tour={tour} removeTour={removeTour}/>)  
-      }
+      {tours.map(tour => (
+        <Tour key={tour.id} tour={tour} removeTour={removeTour} />
+      ))}
     </section>
   );
 };
