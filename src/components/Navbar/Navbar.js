@@ -1,10 +1,11 @@
 import React from 'react';
 import logo from '../../logo.svg';
+import './navbar.scss';
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <img src={logo} alt="City Tours Logo" />
+      <img className="logo" src={logo} alt="City Tours Logo" />
       <ul className="nav-links">
         <li>
           <a href="/" className="nav-link">
